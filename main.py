@@ -1,18 +1,35 @@
 from api.indicators.bitso import Bitso
+from api.indicators.yahoo_financial import YahooFinancial
 from analysis.Indicators import Indicators
 
+
 def print_hi(name):
-    # Instancia de Bitso
-    bitso_data = Bitso('BTC-MXN', '2023-01-01', '2023-02-20')
+    # Bitso instance
+    bitso_data = Bitso('btc_usd', '2023-01-01', '2023-02-20', 86400)
 
-    # Instancia de Indicators
-    indicators = Indicators(bitso_data)
+    # YahooFinancial instance
+    yahoo_data = YahooFinancial('BTC-USD', '2023-01-01', '2023-02-20')
 
-    # Obtener todos los indicadores
-    all_indicators = indicators.get_indicators()
+    # Indicators instance for Bitso
+    indicators_bitso = Indicators(bitso_data)
 
-    # Imprimir todos los indicadores
-    for indicator, value in all_indicators.items():
+    # Indicators instance for YahooFinancial
+    indicators_yahoo = Indicators(yahoo_data)
+
+    # Get all indicators for Bitso
+    all_indicators_bitso = indicators_bitso.get_indicators()
+
+    # Get all indicators for YahooFinancial
+    all_indicators_yahoo = indicators_yahoo.get_indicators()
+
+    # Print all indicators for Bitso
+    print("Indicators for Bitso:")
+    for indicator, value in all_indicators_bitso.items():
+        print(f"{indicator}: {value}")
+
+    # Print all indicators for YahooFinancial
+    print("Indicators for YahooFinancial:")
+    for indicator, value in all_indicators_yahoo.items():
         print(f"{indicator}: {value}")
 
 

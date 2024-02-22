@@ -1,3 +1,17 @@
+"""
+Comparison of Technical Indicators between Bitso and YahooFinancial:
+
+- SMA_50 (Simple Moving Average of 50 days) shows a minimal difference of 0.20%, indicating a high similarity in the simple moving averages calculated by both sources.
+- EMA_20 (Exponential Moving Average of 20 days) also presents a slight discrepancy of 0.21%, reflecting consistency in the exponential moving averages.
+- RSI (Relative Strength Index) has a more noticeable variation of 2.95%, which may suggest slight differences in the perceived momentum between the two platforms.
+- Bollinger Bands (Upper and Lower) exhibit differences of 0.65% and 0.61% respectively, indicating congruence in the estimated market volatility.
+- The MACD Line (Moving Average Convergence Divergence) and Signal Line differ by 3.92% and 0.89% respectively, which could indicate variations in the perception of market momentum and trend.
+- VWAP (Volume Weighted Average Price) has a difference of 2.63%, pointing out small discrepancies in the volume-weighted average price.
+- Fibonacci Levels (23.6%, 38.2%, 61.8%) show differences of 0.32%, 0.26%, and 0.13% respectively, demonstrating a high coherence in the estimated supports and resistances by both sources.
+
+These percentage differences indicate that, overall, there is a high similarity in the technical indicators provided by Bitso and YahooFinancial, with some minor variations that could be attributed to differences in the input data or the specific calculation methods used by each platform.
+"""
+
 class BaseFinancialIndicators:
     """
     This is the base class for financial data processors. It provides the structure and methods

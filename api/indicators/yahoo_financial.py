@@ -29,3 +29,4 @@ class YahooFinancial(BaseFinancialIndicators):
         Downloads financial data for the specified asset and date range from Yahoo Finance.
         """
         self.data = yf.download(self.symbol, start=self.start_date, end=self.end_date)
+        print(self.data)
