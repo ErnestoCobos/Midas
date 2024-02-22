@@ -68,13 +68,13 @@ Understanding the market context requires a holistic view and the ability to int
 - [ ] Implement unit tests for all functions and methods.
 - [ ] Optimize the performance of the bot.
 - [ ] Implement all types of indicators:
-    - [ ] Moving Averages (MA)
-    - [ ] Relative Strength Index (RSI)
-    - [ ] Bollinger Bands
-    - [ ] MACD (Moving Average Convergence Divergence)
-    - [ ] Volume
-    - [ ] VWAP (Volume Weighted Average Price)
-    - [ ] Fibonacci Retracement
+    - [X] Moving Averages (MA)
+    - [X] Relative Strength Index (RSI)
+    - [X] Bollinger Bands
+    - [X] MACD (Moving Average Convergence Divergence)
+    - [X] Volume
+    - [X] VWAP (Volume Weighted Average Price)
+    - [X] Fibonacci Retracement
 - [ ] Implement Market Context Analysis indicators:
     - [ ] Fundamental Analysis
     - [ ] Market Sentiment
