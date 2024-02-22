@@ -16,6 +16,7 @@ class Bitso(BaseFinancialIndicators):
     def __init__(self, pair, start_date, end_date):
         super().__init__(pair, start_date, end_date)
 
+        # TODO: Fix data fetching, current method returns empty results.
     def fetch_data(self):
         url = f"https://api.bitso.com/v3/ohlcv/?book={self.symbol}&start={self.start_date}&end={self.end_date}&granularity=86400"
         response = requests.get(url)
