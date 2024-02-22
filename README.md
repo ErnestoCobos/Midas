@@ -1,5 +1,5 @@
-# Midas Service
-![Logo of the Midas service, created in Procreate](assets%2Flogo.png)
+# Midas 
+![Logo of the Midas, created in Procreate](assets%2Flogo.png)
 Midas is a service designed to assist with daily trading on the Bitso platform. The idea for Midas was born out of a need for an extra income and the challenge of keeping up with the constant changes in the markets. 
 
 The main issue was the difficulty in remembering to check the markets or simply not having the time to do so. This led to the idea of creating a bot that could handle this task. The bot is designed to take a snapshot of the market every 20 minutes, allowing for a constant update on the state of the markets. This approach helps to minimize losses and maximize gains.
