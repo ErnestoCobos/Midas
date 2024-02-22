@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb7fc0cf-d43f-4158-9d20-f95a2dcbf9d1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/midas.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Analisis/tecnico.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis/Indicators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/analysis/technical_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/indicators/base_financial_indicators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/indicators/bitso.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/indicators/financial_data_interface.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/indicators/yahoo_financial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="cb7fc0cf-d43f-4158-9d20-f95a2dcbf9d1" name="Changes" comment="first commit &#10;&#10;This commit provides the ability to download, process, and analyze financial data. It includes implementations for common financial data indicators like SMA, EMA, RSI, and others. It also includes classes for fetching data from Bitso and Yahoo, creating summaries and getting OpenAI responses. Finally, it adds a main.py script to run the service, as well as a README.md for project documentation." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,6 +39,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/c0305/Projects/Cobos/Midas",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -81,7 +66,11 @@
     </option>
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets" />
       <recent name="$PROJECT_DIR$/api/indicators" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -128,12 +117,25 @@
       <updated>1708546954375</updated>
       <workItem from="1708546957665" duration="99000" />
       <workItem from="1708547061532" duration="42000" />
-      <workItem from="1708547107196" duration="16023000" />
+      <workItem from="1708547107196" duration="16362000" />
     </task>
+    <task id="LOCAL-00001" summary="first commit &#10;&#10;This commit provides the ability to download, process, and analyze financial data. It includes implementations for common financial data indicators like SMA, EMA, RSI, and others. It also includes classes for fetching data from Bitso and Yahoo, creating summaries and getting OpenAI responses. Finally, it adds a main.py script to run the service, as well as a README.md for project documentation.">
+      <option name="closed" value="true" />
+      <created>1708567392473</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708567392473</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit &#10;&#10;This commit provides the ability to download, process, and analyze financial data. It includes implementations for common financial data indicators like SMA, EMA, RSI, and others. It also includes classes for fetching data from Bitso and Yahoo, creating summaries and getting OpenAI responses. Finally, it adds a main.py script to run the service, as well as a README.md for project documentation." />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit &#10;&#10;This commit provides the ability to download, process, and analyze financial data. It includes implementations for common financial data indicators like SMA, EMA, RSI, and others. It also includes classes for fetching data from Bitso and Yahoo, creating summaries and getting OpenAI responses. Finally, it adds a main.py script to run the service, as well as a README.md for project documentation." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Midas$tecnico.coverage" NAME="tecnico Coverage Results" MODIFIED="1708552346401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Analisis" />
