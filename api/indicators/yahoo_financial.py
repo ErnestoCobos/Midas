@@ -1,5 +1,4 @@
 import yfinance as yf
-from pandas import DataFrame
 from .base_financial_indicators import BaseFinancialIndicators
 
 class YahooFinancial(BaseFinancialIndicators):
