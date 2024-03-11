@@ -116,3 +116,7 @@ Understanding the market context requires a holistic view and the ability to int
 - [ ] Implement a funding strategy for investment and financial sustainability.
 
 **Note**: Some of the task of the todo list are just ideas and may not be implemented. I write this at 3AM and I'm tired.
+
+## References
+### APIs
+   - [Bitso API](https://docs.bitso.com/bitso-api/docs/api-overview)https://docs.bitso.com/bitso-api/docs/api-overview 
