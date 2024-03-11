@@ -119,4 +119,4 @@ Understanding the market context requires a holistic view and the ability to int
 
 ## References
 ### APIs
-   - [Bitso API](https://docs.bitso.com/bitso-api/docs/api-overview)https://docs.bitso.com/bitso-api/docs/api-overview 
+   - [Bitso API](https://docs.bitso.com/bitso-api/docs/api-overview)
