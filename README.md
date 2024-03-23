@@ -38,7 +38,7 @@ Market context analysis goes beyond technical indicators and focuses on understa
    - Economic Data: Reports on GDP, interest rates, employment, inflation, and trade balance can significantly influence financial markets.
    - Corporate Results: Earnings, revenue, debt, and other financial indicators of specific companies are crucial for stock investors.
    - Sector Health: The performance of specific sectors (technology, consumer goods, energy, etc.) can indicate broader economic trends.
-2. **Market Sentiment**
+2. **Market Sentiment**´w
    - Sentiment Surveys: Tools like the Fear and Greed Index, consumer and investor confidence surveys can give an idea of the general market sentiment.
    - Social Media and News Analysis: Monitoring trends on social media and news can provide early signals about changes in market perception towards certain assets or sectors.
 3. **Geopolitical Events**

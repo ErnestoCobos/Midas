@@ -3,10 +3,11 @@ import os
 
 import aws_cdk as cdk
 
+
 from midas.midas_stack import MidasStack
 
 
-app = cdk.App()
+app = cdk.core.App()
 MidasStack(app, "MidasStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
