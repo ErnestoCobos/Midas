@@ -72,11 +72,25 @@ class MidasStack(Stack):
             "Project": "Midas",
             "Environment": "Development"
         }
-        
+
         # Create a VPC
         vpc = ec2.Vpc(self, "midas-vpc", nat_gateways=1)
         for key, value in tags.items():
             Tags.of(vpc).add(key, value)
+
+                    # Crear un grupo de seguridad
+        security_group = ec2.SecurityGroup(
+            self, 
+            "midas-db-sg",
+            vpc=vpc,
+            description="Security group for Midas DB",
+            allow_all_outbound=True   # Permitir todo el tráfico saliente
+        )
+        # Permitir todas las conexiones entrantes en el puerto 3306
+        security_group.add_ingress_rule(
+            ec2.Peer.any_ipv4(),  # Permitir tráfico desde cualquier dirección IP
+            ec2.Port.tcp(3306)    # Permitir tráfico en el puerto 3306
+        )
 
         # Create a subnet group for the database
         db_subnet_group = rds.SubnetGroup(
@@ -118,6 +132,8 @@ class MidasStack(Stack):
             ),
             database_name='midas',
             removal_policy=RemovalPolicy.DESTROY,  # Change to core.RemovalPolicy.RETAIN if you want the database to persist after deleting the stack
+            publicly_accessible=True,
+            security_groups=[security_group],  # Usar el grupo de seguridad creado
         )
 
         for key, value in tags.items():
@@ -215,6 +231,11 @@ class MidasStack(Stack):
                     namespace="aws:elasticbeanstalk:application:environment",
                     option_name="SENTRY_DSN",
                     value=os.environ.get('SENTRY_DSN', 'NA')
+                ),
+                eb.CfnEnvironment.OptionSettingProperty(
+                    namespace="aws:elasticbeanstalk:application:environment",
+                    option_name="FLASK_APP",
+                    value='midasbot/app.py'
                 ),
                 eb.CfnEnvironment.OptionSettingProperty(
                     namespace="aws:autoscaling:asg",
