@@ -1,14 +1,20 @@
-from aws_cdk import aws_ec2 as ec2, aws_rds as rds, aws_elasticbeanstalk as eb, aws_iam as iam, Tags
-from aws_cdk import Stack
-from aws_cdk import SecretValue, RemovalPolicy
-from constructs import Construct
-from aws_cdk import aws_s3_assets as s3_assets, CfnTag
-
+import os
 import json
-
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
-
+from aws_cdk import (
+    aws_ec2 as ec2,
+    aws_rds as rds,
+    aws_elasticbeanstalk as eb,
+    aws_iam as iam,
+    aws_s3_assets as s3_assets,
+    CfnTag,
+    SecretValue,
+    RemovalPolicy,
+    Stack,
+    Tags,
+)
+from constructs import Construct
 
 class MidasStack(Stack):
     """
@@ -110,11 +116,14 @@ class MidasStack(Stack):
                     json_field="Password"
                 ),
             ),
+            database_name='midas',
             removal_policy=RemovalPolicy.DESTROY,  # Change to core.RemovalPolicy.RETAIN if you want the database to persist after deleting the stack
         )
 
         for key, value in tags.items():
             Tags.of(db).add(key, value)
+
+        
 
         # Create an Elastic Beanstalk application to host the Flask worker
         eb_app= eb.CfnApplication(
@@ -179,18 +188,33 @@ class MidasStack(Stack):
             option_settings=[
                 eb.CfnEnvironment.OptionSettingProperty(
                     namespace="aws:elasticbeanstalk:application:environment",
-                    option_name="DB_HOST",
+                    option_name="MYSQL_DATABASE_HOST",
                     value=db.db_instance_endpoint_address
                 ),
                 eb.CfnEnvironment.OptionSettingProperty(
                     namespace="aws:elasticbeanstalk:application:environment",
-                    option_name="DB_USER",
+                    option_name="MYSQL_DATABASE_USERNAME",
                     value=db_secret['Username']
                 ),
                 eb.CfnEnvironment.OptionSettingProperty(
                     namespace="aws:elasticbeanstalk:application:environment",
-                    option_name="DB_PASSWORD",
+                    option_name="MYSQL_DATABASE_PASSWORD",
                     value=db_secret['Password']
+                ),
+                eb.CfnEnvironment.OptionSettingProperty(
+                    namespace="aws:elasticbeanstalk:application:environment",
+                    option_name="MYSQL_DATABASE_DB",
+                    value="midas"
+                ),
+                eb.CfnEnvironment.OptionSettingProperty(
+                    namespace="aws:elasticbeanstalk:application:environment",
+                    option_name="POLIGON_API_KEY",
+                    value=os.environ.get('POLIGON_API_KEY', 'NA')
+                ),
+                eb.CfnEnvironment.OptionSettingProperty(
+                    namespace="aws:elasticbeanstalk:application:environment",
+                    option_name="SENTRY_DSN",
+                    value=os.environ.get('SENTRY_DSN', 'NA')
                 ),
                 eb.CfnEnvironment.OptionSettingProperty(
                     namespace="aws:autoscaling:asg",
